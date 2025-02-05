@@ -31,6 +31,9 @@ public class HomePage extends UiDriverUtils {
 	@FindBy(css  = "svg[aria-label='A chart.'] g")
 	private List<WebElement> pieChart;
 	
+	@FindBy(css  = "svg[aria-label='A chart.'] g text[text-anchor='start']")
+	private List<WebElement> pieVATRate;
+
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -72,10 +75,19 @@ public class HomePage extends UiDriverUtils {
 	}
 	
 	public boolean isPieChartDisplayed() {
+		waitFor(1500);
 		if (pieChart.size() > 2) {
 			return true;
 		}else {
 			return false;
 		}
+	}
+	
+	public String getPieChartVATRateValue() {
+		return pieVATRate.get(0).getText();
+	}
+	
+	public String getPieChartPriceValue() {
+		return pieVATRate.get(1).getText();
 	}
 }

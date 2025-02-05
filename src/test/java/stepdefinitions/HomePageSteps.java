@@ -56,4 +56,15 @@ public class HomePageSteps {
 		Assert.assertFalse(homePage.isPieChartDisplayed(), "Pie chart is displayed");
 	}
 
+	
+	@Then("Verify User can see {string} price on pie chart")
+	public void verify_User_can_see_price_on_pie_chart(String expectedPrice) {
+		Assert.assertEquals(homePage.getPieChartPriceValue(), expectedPrice);
+	}
+	
+	@Then("Verify user can see {string} VAt on pie chart")
+	public void verify_user_can_see_VAt_on_pie_chart(String vatRate) {
+		Assert.assertEquals(homePage.getPieChartVATRateValue(), vatRate);
+	}
+
 }

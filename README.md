@@ -28,10 +28,13 @@ To run the framework and execute tests, ensure that the following tools and depe
 The [SampleScenarios.feature](src/test/resources/features/SampleScenarios.feature) file contains the following scenarios: 
 
 1. **Scenario Outline: Verify user is able to calculate tax correctly**  
-   This scenario outline tests to calculate Tax with different combinations of input. 
+   This test ensures the VAT calculator correctly computes tax for different valid input values.
+   Automating this scenario helps validate core functionality of the calculator, ensuring accuracy across multiple cases.
+   
 
 2. **Scenario Outline: Verify Pie chart not displayed when User enter negative value, Special Characters, or number greater than expected**  
-   This scenario outline tests to calculate Tax with different invalid combinations of input. 
+   This test checks that the Pie chart does not appear when the user enters invalid values such as negative numbers, special characters, or values, exceeding the expected range.
+   Automating this scenario ensures the system handles invalid inputs correctly.
 
 The `@TestUI` tags in the feature file allow the execution or debugging of individual scenarios as needed.
 
