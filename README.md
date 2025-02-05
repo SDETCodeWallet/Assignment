@@ -19,7 +19,6 @@ To run the framework and execute tests, ensure that the following tools and depe
 2. Run below command to download all required dependency defined in POM.xml file
    ```
    bash
-   Copy code
    mvn clean install
 
 ## BDD Approach
